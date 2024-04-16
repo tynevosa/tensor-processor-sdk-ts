@@ -11,14 +11,14 @@
   import Tpu from "@tynevosa/tensor-processor";
 
   const client: Tpu = new Tpu({
-    apiKey: TPU_API_KEY,
+    apiKey: YOUR_TPU_API_KEY,
   });
 
   // Run model
   client.prediction({
-    model: MODEL_NAME,
+    model: "Stable Lightning",
     input: {
-      // Model Input
+      "prompt": "a panda eating bamboo"
     }
   })
   .then((result) => {
