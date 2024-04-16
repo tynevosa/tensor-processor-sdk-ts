@@ -26,5 +26,13 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tynevosa/tensor-processor-sdk-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tynevosa/tensor-processor-sdk-ts/issues"
+  },
+  "homepage": "https://github.com/tynevosa/tensor-processor-sdk-ts#readme"
 }
