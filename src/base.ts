@@ -3,16 +3,19 @@ import fetch from "isomorphic-unfetch";
 type Config = {
   apiKey: string;
   baseUrl?: string;
+  timeout?: number;
 };
 
 export abstract class Base {
   private apiKey: string;
   private baseUrl: string;
+  protected timeout: number;
 
   constructor(config: Config) {
     // Set the API key and base URL for the class instance
     this.apiKey = config.apiKey;
     this.baseUrl = config.baseUrl || "http://95.217.158.17:5000/api";
+    this.timeout = config.timeout || 600; // seconds
   }
 
   protected async request<T>(endpoint: string, options?: RequestInit): Promise<T> {

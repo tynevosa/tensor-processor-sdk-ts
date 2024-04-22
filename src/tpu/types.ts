@@ -3,9 +3,18 @@ export type PredictionInput = {
   input: object;
 };
 
-export type PredictionOutput = {
-  output: object;
-  time: number;
+export type PredictionStatus = {
+  id: number;
+  status: string;
+  message?: string;
+  prediction_id?: number;
+}
+
+export type PredictionResult = {
+  input: PredictionInput;
+  output?: any;
+  time?: number;
+  cost?: number;
 }
 
 export type PredictionHistory = {
