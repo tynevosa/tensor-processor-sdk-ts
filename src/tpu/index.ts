@@ -39,7 +39,7 @@ export class Tpu extends Base {
   }
 
   // Method to create a prediction
-  async prediction(predictionInput: PredictionInput): Promise<PredictionStatus | null | string> {
+  async prediction(predictionInput: PredictionInput): Promise<any> {
     const response = await this.request<PredictionStatus>('/prediction', {
       method: "POST",
       body: JSON.stringify(predictionInput),

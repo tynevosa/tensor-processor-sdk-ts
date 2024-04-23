@@ -19,7 +19,7 @@ export type PredictionResult = {
 
 export type PredictionHistory = {
   input: object;
-  result: object;
+  output: object;
   cost: number;
   model: string;
 }
